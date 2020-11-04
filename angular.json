@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "travFront"
+    }
+  },
+  "defaultProject": "travFront",
+  "cli": {
+    "analytics": "0ab9b2f6-ee19-43c5-b258-15ed0286127a"
+  }
 }
