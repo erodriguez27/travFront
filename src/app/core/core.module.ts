@@ -7,9 +7,7 @@ import { TravisService } from './services/travis/travis.service';
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
-    AuthService,
-    TravisService
+    CommonModule
   ]
 })
 export class CoreModule { }
