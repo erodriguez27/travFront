@@ -1,0 +1,16 @@
+{
+    "/api/*": {
+      "target": "http://127.0.0.1:3010/auth/github",
+      "secure": true,
+      "changeOrigin": true,
+      "logLevel": "debug",
+      "pathRewrite": {"^/api" : "/"}
+    },
+    "/auth/*": {
+      "target": "http://127.0.0.1:3010/auth/loggedIn",
+      "secure": true,
+      "changeOrigin": true,
+      "logLevel": "debug",
+      "pathRewrite": {"^/auth" : "/"}
+    }
+  }

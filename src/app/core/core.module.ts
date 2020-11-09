@@ -8,6 +8,9 @@ import { TravisService } from './services/travis/travis.service';
   declarations: [],
   imports: [
     CommonModule
+  ],
+  providers: [
+    AuthService
   ]
 })
 export class CoreModule { }
