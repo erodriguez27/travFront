@@ -15,11 +15,7 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.location = window.location.href;
-    this.auth.loggedIn().subscribe(res => {
-      console.log(res);
-    });
-    console.log(this);
+    this.location = 'dashboard';
   }
 
   clikedLogIn(): void {
