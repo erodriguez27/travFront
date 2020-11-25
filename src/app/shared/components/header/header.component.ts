@@ -13,6 +13,11 @@ export class HeaderComponent implements OnInit {
   ) { }
   user: any;
   profilePicture: string;
+  public isCollapsed = true;
+
+ toggleMenu(): void {
+    this.isCollapsed = !this.isCollapsed;
+  }
   ngOnInit(): void {
     this.auth.loggedIn().subscribe(res => {
       if (res.logged) {

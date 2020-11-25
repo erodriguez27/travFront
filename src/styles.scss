@@ -36,3 +36,6 @@ $travFront-theme: mat-light-theme((
 @import './assets/css/bootstrap-social.css';
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
