@@ -2,7 +2,8 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { DashboardRoutingModule } from './dashboard-routing.module';
-import { MaterialModule } from './../material/material.module';
+
+import { SharedModule } from './../shared/shared.module';
 
 
 @NgModule({
@@ -12,7 +13,7 @@ import { MaterialModule } from './../material/material.module';
         CommonModule,
         RouterModule,
         DashboardRoutingModule,
-        MaterialModule
+        SharedModule
     ],
     exports: [
     ]
