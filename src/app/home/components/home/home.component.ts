@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import { AuthService } from './../../../core/services/auth/auth.service';
+import { map } from 'rxjs/operators';
+import { analyzeAndValidateNgModules } from '@angular/compiler';
 
 @Component({
   selector: 'app-home',
@@ -19,10 +21,15 @@ export class HomeComponent implements OnInit {
   }
 
   clikedLogIn(): void {
-    this.auth.logIn()
-    .subscribe(res => {
-      console.log(res);
+    this.auth.logIn().subscribe(res => {
+      console.log(res.header);
     });
+    // this.auth.logIn()
+    // .then(res => { res.pipe(map(rep => console.log(rep))  );
+
+    //   // .subscribe(resp => {
+    //   // console.log(resp);
+    // });
   }
 
 }

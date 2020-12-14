@@ -12,14 +12,21 @@ export class DashboardComponent implements OnInit {
   ) { }
     user: any;
     profilePicture: string;
+    reps: Array<any>;
+
   ngOnInit(): void {
-    this.auth.loggedIn().subscribe(res => {
+    this.reps = [];
+    this.auth.getRepos().subscribe(res => {
+      console.log(res);
+      this.reps = res.data.repositories;
       if (res.logged){
-        console.log(res.user);
-        this.user = res.user;
-        this.profilePicture = res.user.photos[0].value;
       }
     });
+  }
+
+  showRow(item): void {
+    console.log(item);
+
   }
 
 }
